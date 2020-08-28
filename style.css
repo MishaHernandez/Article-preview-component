@@ -7,34 +7,33 @@
     --bg-2: hsl(214, 17%, 51%);
     --bg-3: hsl(212, 23%, 69%);
     --bg-4: hsl(210, 46%, 95%);
+    --b-radius: 10px;
 }
 body {
-    background-color: hsl(210, 46%, 95%);
     height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0;
+    background-color: var(--bg-4);
 }
 a {
     color: inherit;
 }
 
-/* ARTICLE STYLES */
+/* Primary styles */
 .article {
     width: 90%;
     min-width: 320px;
     margin: auto;
-    border-radius: 10px;
+    border-radius: var(--b-radius);
     box-shadow: 0 0 10px #d3d3d3;
     background-color: #fff;
 }
     .section-one {
         height: 200px;
-        background-image: url('images/drawers.jpg');
-        background-size: cover;
-        background-position: center;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+        background: url('images/drawers.jpg') center / cover;
+        border-top-left-radius: var(--b-radius);
+        border-top-right-radius: var(--b-radius);
     }
 
 .article-content {
@@ -45,8 +44,8 @@ a {
         color: var(--bg-1);
     }
     .content__paragraph {
-        color: var(--bg-3);
         font-size: 13px;
+        color: var(--bg-3);
     }
 
 .article-bottom {
@@ -56,8 +55,8 @@ a {
     height: 70px;
     padding-left: 2rem;
     padding-right: 2rem;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: var(--b-radius);
+    border-bottom-right-radius: var(--b-radius);
 }
 .author {
     display: flex;
@@ -117,6 +116,12 @@ a {
     color: var(--bg-2); /* change property with js */
     cursor: pointer;
 }
+.attribution {
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
 
 /* Secundary classes */
 .font {
@@ -141,56 +146,56 @@ a {
         display: flex;
         width: 700px;
     }
-    section:nth-child(1) {
+    .section-one {
         width: 40%;
         height: auto;
         background-size: cover;
         background-position: inherit;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
+        border-top-left-radius: var(--b-radius);
+        border-bottom-left-radius: var(--b-radius);
         border-top-right-radius: 0;
     }
-    section:nth-child(2) {
+    .section-two {
         width: 60%;
     }
-    .article-content {
-        padding-top: 1rem;
-        padding-bottom: 0;
-    }
-    .content__title {
-        font-size: 1.3rem;
-    }
+        .article-content {
+            padding-top: 1rem;
+            padding-bottom: 0;
+        }
+        .content__title {
+            font-size: 1.3rem;
+        }
     .article-bottom {
         position: relative;
         padding-bottom: 1rem;
         border-bottom-left-radius: 0;
     }
-    .author {
-        position: static;
-    }
-    .social {
-        top: -73px;
-        right: -73px;
-        background-color: var(--bg-1);
-        padding: 1rem 2rem;
-        border-radius: 10px;
-        box-shadow: 0 8px 8px lightgray;
-    }
-    .social::after {
-        position: absolute;
-        left: calc(50% - 10px);
-        bottom: -10px;
-        content: "";
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 10px solid var(--bg-1);
-    }
-    .social svg {
-        font-size: 1.3rem;
-    }
+        .author {
+            position: static;
+        }
+        .social {
+            top: -73px;
+            right: -73px;
+            background-color: var(--bg-1);
+            padding: 1rem 2rem;
+            border-radius: var(--b-radius);
+            box-shadow: 0 8px 8px lightgray;
+        }
+        .social::after {
+            position: absolute;
+            left: calc(50% - 10px);
+            bottom: -10px;
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid var(--bg-1);
+        }
+        .social svg {
+            font-size: 1.3rem;
+        }
     .change-bg-color {
-        background-color: #fff;
+        background-color: inherit;
     }
 }
